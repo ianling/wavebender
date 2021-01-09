@@ -1,21 +1,19 @@
 #!/usr/bin/env python
-'''
+"""
 Installer script for the wavebender module.
-'''
+"""
 
 from distutils.core import setup
-import wavebender
 
-setup (
-    name = "wavebender",
-    description = "An audio synthesis library for Python.",
-
-    author = wavebender.__author__,
-    author_email = wavebender.__author_email__,
-    version = "0.3",
-    url = wavebender.__url__,
-    long_description = wavebender.__longdescr__,
-    classifiers = wavebender.__classifiers__,
-    packages = ['wavebender',],
+setup(
+    name="wavebender",
+    description="An audio synthesis library for Python.",
+    author='Zach Denton',
+    author_email='zacharydenton@gmail.com',
+    version="0.4",
+    url='http://github.com/zacharydenton/wavebender',
+    long_description='An audio synthesis library for Python.',
+    classifiers=['Topic :: Multimedia :: Sound/Audio :: Sound Synthesis'],
+    packages=['wavebender', ],
     install_requires=[]
 )

@@ -1,5 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+from sys import stdout
+
 from wavebender import *
+
 
 def violin(amplitude=0.1):
     # simulates a violin playing G.
@@ -11,6 +14,7 @@ def violin(amplitude=0.1):
             damped_wave(1000.0, amplitude=0.44*amplitude, length=44100 * 5),
             damped_wave(1600.0, amplitude=0.32*amplitude, length=44100 * 5))
 
+
 channels = (violin(),)
 samples = compute_samples(channels, 44100 * 60 * 1)
-write_wavefile(stdout, samples, 44100 * 60 * 1, nchannels=1)
+write_wavefile(stdout.buffer, samples, 44100 * 60 * 1, nchannels=1)
